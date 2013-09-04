@@ -43,7 +43,8 @@ void Fraccion::Sumar(int n, int d)
     int suma_numerador = (numerador * d) + (denominador * n);
     int suma_denominador = denominador * d;
 
-    cout << suma_numerador << " / " << suma_denominador << endl;
+    Fraccion f(suma_numerador, suma_denominador);
+    f.Mostrar();
 }
 
 int main()
