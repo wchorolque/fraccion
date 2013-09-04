@@ -11,6 +11,7 @@ class Fraccion
         Fraccion();
         Fraccion(int n, int d);
         Fraccion(const Fraccion& f);
+        void Mostrar();
 };
 
 Fraccion::Fraccion()
@@ -31,10 +32,20 @@ Fraccion::Fraccion(const Fraccion& f)
     denominador = f.denominador;
 }
 
+void Fraccion::Mostrar()
+{
+    cout << numerador << " / " << denominador << endl;
+}
+
 int main()
 {
-    Fraccion f;
-    cout << "Hello World!" << endl;
+    Fraccion f1;
+    f1.Mostrar();
+    Fraccion f2(2, 3);
+    f2.Mostrar();
+    Fraccion f3(f2);
+    f3.Mostrar();
+
     return 0;
 }
 
