@@ -13,6 +13,7 @@ class Fraccion
         Fraccion(const Fraccion& f);
         void Mostrar();
         Fraccion Sumar(int n, int d);
+        int mcd(int x, int y);
 };
 
 Fraccion::Fraccion()
@@ -46,6 +47,11 @@ Fraccion Fraccion::Sumar(int n, int d)
     Fraccion f(suma_numerador, suma_denominador);
 
     return f;
+}
+
+int Fraccion::mcd(int x, int y)
+{
+    return (!y) ? x : mcd(y,x%y);
 }
 
 int main()
