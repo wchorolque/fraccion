@@ -10,6 +10,7 @@ class Fraccion
     public:
         Fraccion();
         Fraccion(int n, int d);
+        Fraccion(const Fraccion& f);
 };
 
 Fraccion::Fraccion()
@@ -22,6 +23,12 @@ Fraccion::Fraccion(int n, int d)
 {
     numerador = n;
     denominador = d;
+}
+
+Fraccion::Fraccion(const Fraccion& f)
+{
+    numerador = f.numerador;
+    denominador = f.denominador;
 }
 
 int main()
