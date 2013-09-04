@@ -9,12 +9,19 @@ class Fraccion
         int denominador;
     public:
         Fraccion();
+        Fraccion(int n, int d);
 };
 
 Fraccion::Fraccion()
 {
     numerador = 0;
     denominador = 1;
+}
+
+Fraccion::Fraccion(int n, int d)
+{
+    numerador = n;
+    denominador = d;
 }
 
 int main()
